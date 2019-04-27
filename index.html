@@ -1,139 +1,298 @@
 <!DOCTYPE html>
-<html>
-
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/debdev/image/upload/v1547091152/favicon.ico">
-    <title>DebDevelops</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Deb Thornton</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://res.cloudinary.com/debdev/image/upload/v1547091152/favicon.ico">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
     <div class="page-top">
-
         <nav>
             <div id="logo-div">
                 <a href="https://debxdev.github.io/debdevelops/">
-                    <img class="logo-white" src="https://res.cloudinary.com/debdev/image/upload/v1547075163/DebDevelopsLogoWhite-min.png">
+                    <img class="logo-white"
+                        src="https://res.cloudinary.com/debdev/image/upload/v1547075163/DebDevelopsLogoWhite-min.png">
                 </a>
             </div>
-            <span class='nav-item'><a href="#header">About</a></span>
-            <span class='nav-item'><a href="#arrow">Works</a></span>
-            <span class='nav-item'><a href="#social">Contact</a></span>
+            <div id='nav-items'>
+                <span class='nav-item'><a href="#header">About</a></span>
+                <span class='nav-item'><a href="#works-container">Works</a></span>
+                <span class='nav-item'><a href="#social">Contact</a></span>
+            </div>     
         </nav>
         <div class="line"></div>
     </div>
 
     <header id="header">
         <div id="gradient" class='bio'>
-            <p class='bio-greeting'>Hello, I'm Deb.</p>
+            <h1 class='bio-greeting'>Hello, I'm Deb.</h1>
             <br>
-            <p class='bio-text'>I'm an aspiring web and UI/UX developer. I've developed a few websites, apps, and fun distractions using these:</p>
+            <p class='bio-text'>I'm a front-end web developer in Philadelphia. I've developed a few websites, web apps,
+                and fun distractions using these:</p>
 
             <div class="tools">
                 <img class="tool-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/html-min.png" />
                 <img class="tool-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/css-min.png" />
                 <img class="tool-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074970/js-512-min.png" />
                 <img class="tool-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/jQuery-min.png" />
-                <img class="tool-pic" id="react-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/react2-min.png" />
+                <!-- <img class="tool-pic" id="react-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/react2-min.png" /> -->
+                <img class="tool-pic" src="https://res.cloudinary.com/debdev/image/upload/v1556163842/Sass-min.png" />
                 <img class="tool-pic" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/bootstrap-min.png" />
             </div>
 
-            <p class='bio-text'>Check out my portfolio below </p>
-            <a href=#arrow><img class="arrow" id="arrow" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNOTguOSwxODQuN2wxLjgsMi4xbDEzNiwxNTYuNWM0LjYsNS4zLDExLjUsOC42LDE5LjIsOC42YzcuNywwLDE0LjYtMy40LDE5LjItOC42TDQxMSwxODcuMWwyLjMtMi42ICBjMS43LTIuNSwyLjctNS41LDIuNy04LjdjMC04LjctNy40LTE1LjgtMTYuNi0xNS44djBIMTEyLjZ2MGMtOS4yLDAtMTYuNiw3LjEtMTYuNiwxNS44Qzk2LDE3OS4xLDk3LjEsMTgyLjIsOTguOSwxODQuN3oiLz48L3N2Zz4=" /></a>
+            <p class='bio-text'>Check out my portfolio below</p>
+            <a href="#works-container">
+                <i class="fa fa-caret-down icon"></i>
+            </a>
         </div>
+        <div class="line"></div>
     </header>
-
-    <div class="line"></div>
-
+    
     <main>
-        <div class='works'>
-            <div id='syzygy-div'>
-                <div class="img-container syzygy-img-container">
-                    <img class="syzygy-img" src="https://res.cloudinary.com/debdev/image/upload/v1547003485/Syzygy_Display_Clear-min.png" alt="Syzygy">
+        <div id='works-container'>
+            
+            <div id='work-description-container'>
+                <div id='close' class='close-nondisplay'>
+                    <button onclick='swipeDown()'>X</button>
                 </div>
-                <p class="works-text"><a id='syzygy-link' href='https://debxdev.github.io/Syzygy/' target="_blank">Syzygy</a> is a web app that joins productivity and relaxation into one simple UI. The app displays a 12-hour clock on non-mobile displays, an editable todo-list, and an audio control interface that interacts with the Soundcloud API. Background photos change according to the currently selected sound. Creating this app required extensive functional programming. I built the functionality of Syzygy using Vanilla JS in order to better acquaint myself with the ins-and-outs of the language in its purest form. I use Syzygy everyday, and it has become my favorite project as a result.</p>
-                <div class='works-sub-text'>
-                    <span>HTML5</span>/
-                    <span>CSS3</span>/
-                    <span>JAVASCRIPT</span>
-                </div>
-            </div>
-            <div id='film-scope-div'>
-                <div class="line"></div>
-                <div class="img-container film-scope-img-container">
-                    <img class="film-scope-img" src="https://res.cloudinary.com/debdev/image/upload/v1547074972/Film_Scope_Display_Clear-min.png" alt="Film Scope">
-                </div>
-                <p class="works-text"><a id='film-scope-link' href='https://debxdev.github.io/Film-Scope/' target="_blank">Film Scope</a> is a web app where users can search for film details by title. The app accesses the OMDB API and returns matching responses as an array of movie objects. Details such as the plot, writer/director, and cast are returned as well in an easy to read UI. Creating Film Scope was an exercise in API accessibility.</p>
-                <br>
-                <div class='works-sub-text'>
-                    <span>HTML5</span>/
-                    <span>CSS3</span>/
-                    <span>BOOTSTRAP</span>/
-                    <span>ES6</span>/
-                    <span>JQUERY</span>
-                </div>
-            </div>
-            <div class="line"></div>
-            <div id="tetris-div">
-                <div class="img-container tetris-img-container">
-                    <p class="title-text tetris-title-text">
-                        <span id="T">T</span>
-                        <span id="e">e</span>
-                        <span id="t">t</span>
-                        <span id="r">r</span>
-                        <span id="i">i</span>
-                        <span id="s">s</span>
+                <div class='work-description' id='fansi-schmansi-description'>
+                    <video  loop="loop" width="800" id='fansi-schmansi-video'>
+                        <source src="https://res.cloudinary.com/debdev/video/upload/v1556227096/DebDevelops/fsivid_1.mp4">
+                        Sadly, your browser doesn't support the video tag. This is a smooth MP4 video preview of the
+                        website. <a href="https://debxdev.github.io/Fansi-Schmansi/">Click here</a> to see the site in full.
+                    </video>
+                    <p class='description-text' id='fansi-schmansi-description-text'>
+                        <a id='fansi-schmansi-link' href='https://debxdev.github.io/Fansi-Schmansi/' target="_blank" class='link'>Fansí Schmansí</a> 
+                        is a demonstration of CSS, SASS, Object Oriented and Functional JS Programming on a fictional restaurant website.
+                        This was an exercise in responsive font-end web development, UI design, and Google Maps API integration. Vanilla JS was used in order to prevent the 
+                        reliance of libraries and frameworks.
                     </p>
-                    <div class="codepen-container">
-                        <p data-height="434" data-theme-id="dark" data-slug-hash="WaoqPw" data-default-tab="result" data-user="debthornton" data-pen-title="Tetris" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/debthornton/pen/WaoqPw/">Tetris</a> by Deborah Thornton (<a href="https://codepen.io/debthornton">@debthornton</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                    </div>
+                    <p class='description-text' id='fansi-schmansi-exp-text'>
+                        HTML5 / CSS3 / SASS / JS
+                    </p>
                 </div>
-                <p class="works-text">Tetris has always been one of my favorite games to play, but it's now become my favorite game to code! This app was coded using Vanilla JavaScript, as it was my first exposure to more complex functional programming. The most challenging aspect of building this app was maintaining the boundary between the shifting/rotating pieces and the game's outer frame. I've learned a lot in the process and was able to deliver this app as the finished product. Hit the <strong>"Run Pen"</strong> button to give it a shot.</p>
-                <br>
-                <div class='works-sub-text'>
-                    <span>HTML5</span>/
-                    <span>CSS3</span>/
-                    <span>JAVASCRIPT</span>
+                <div class='work-description' id='syzygy-description'>
+                    <video  loop="loop" width="800" id='syzygy-video'>
+                        <source src="https://res.cloudinary.com/debdev/video/upload/v1556227096/DebDevelops/svid_1.mp4">
+                        Sadly, your browser doesn't support the video tag. This is a smooth MP4 video preview of the
+                        website. <a href="https://debxdev.github.io/Syzygy/">Click here</a> to see the site in full.
+                    </video>
+                    <p class='description-text' id='syzygy-description-text'>
+                        <a id='syzygy-link' href='https://debxdev.github.io/Syzygy/' target="_blank" class='link'>Syzygy</a> 
+                        is a web app that joins productivity and relaxation into one simple UI. 
+                        The app displays a 12-hour clock on non-mobile displays, an editable todo-list, and an audio control 
+                        interface that interacts with the Soundcloud API. Background photos change according to the currently selected sound. 
+                        Creating this app required extensive functional programming. I built the functionality of Syzygy using Vanilla JS in order 
+                        to better acquaint myself with the ins-and-outs of the language in its purest form. I use Syzygy everyday, and it has become 
+                        my favorite project as a result.
+                    </p>
+                    <p class='description-text' id='syzygy-exp-text'>
+                        HTML5 / CSS3 / JS
+                    </p>
                 </div>
-                <div class="line"></div>
+                <div class='work-description' id='film-scope-description'>
+                    <video  loop="loop" width="800" id='film-scope-video'>
+                        <source src="https://res.cloudinary.com/debdev/video/upload/v1556227095/DebDevelops/fsvid_1.mp4">
+                        Sadly, your browser doesn't support the video tag. This is a smooth MP4 video preview of the
+                        website. <a href="https://debxdev.github.io/Film-Scope/">Click here</a> to see the site in full.
+                    </video>
+                    <p class='description-text' id='film-scope-description-text'>
+                        <a id='film-scope-link' href='https://debxdev.github.io/Film-Scope/' target="_blank" class='link'>Film Scope</a> 
+                        is a web app where users can search for film details by title. The app accesses the OMDB API and returns 
+                        matching responses as an array of movie objects. Details such as the plot, writer/director, and cast are 
+                        returned as well in an easy to read UI. Creating Film Scope was an exercise in API accessibility.
+                    </p>
+                    <p class='description-text' id='film-scope-exp-text'>
+                        HTML5 / CSS3 / BOOTSTRAP / JS / JQUERY
+                    </p>
+                </div>
+                <div class='work-description' id='roman-numeral-convertor-description'>
+                    <video  loop="loop" width="800" id='roman-numeral-convertor-video'>
+                        <source src="https://res.cloudinary.com/debdev/video/upload/v1556227095/DebDevelops/rnvid_1.mp4">
+                        Sadly, your browser doesn't support the video tag. This is a smooth MP4 video preview of the
+                        website. <a href="https://debxdev.github.io/roman-numeral-convertor/">Click here</a> to see the site in full.
+                    </video>
+                    <p class='description-text' id='roman-numeral-convertor-description-text'>
+                        <a id='roman-numeral-convertor-link' href='https://debxdev.github.io/roman-numeral-convertor/' target="_blank" class='link'>Roman Numeral Convertor</a> 
+                        is a simple web app that does what the name says. It was developed using Vanilla JavaScript, CSS, and SASS.
+                    </p>
+                    <p class='description-text' id='roman-numeral-convertor-exp-text'>
+                        HTML5 / CSS3 / SASS / JS
+                    </p>
+                </div>
+                <div class='work-description' id='dum-drum-description'>
+                    <video  loop="loop" width="800" id='dum-drum-video'>
+                        <source src="https://res.cloudinary.com/debdev/video/upload/v1556227095/DebDevelops/ddvid_1.mp4">
+                        Sadly, your browser doesn't support the video tag. This is a smooth MP4 video preview of the
+                        website. <a href="https://debxdev.github.io/DumDrum/">Click here</a> to see the site in full.
+                    </video>
+                    <p class='description-text' id='dum-drum-description-text'>
+                        <a id='dum-drum-link' href='https://debxdev.github.io/DumDrum/' target="_blank" class='link'>Dum Drum</a> 
+                        is a simple JavaScript Drum Kit developed using Vanilla JavaScript and simple DOM manipulation.
+                    </p>
+                    <p class='description-text' id='dum-drum-exp-text'>
+                        HTML5 / CSS3 / JS
+                    </p>
+                </div>
+                <div class='work-description' id='portfolio-description'>
+                    <video autoplay="autoplay" loop="loop" width="50" id='portfolio-video'>
+                        <source src="">
+                        Sadly, your browser doesn't support the video tag. This is a smooth MP4 video preview of the
+                        website. <a href="">Click here</a> to see the site in full.
+                    </video>
+                    <p class='description-text' id='portfolio-description-text'>
+                        Creating this portfolio was an exercise in both web design and 
+                        responsive web development. A simple, minimal UI with pops of colorful 
+                        gradients in which I will continue to post projects. If you'd like to reach 
+                        me for more info, <a href='#social'>contact</a> me. I respond quickly.
+                    </p>
+                    <p class='description-text' id='portfolio-exp-text'>
+                        HTML5 / CSS3 / SASS / JS
+                    </p>     
+                </div>
             </div>
-            <div id="portfolio-div" class="img-container">
-                <div id="portfolio-text-div">
-                    <img class="logo-color" src="https://res.cloudinary.com/debdev/image/upload/v1547074971/DebDevelopsLogoColor-min.png">
-                    <p class="title-text portfolio-title-text">(<em>this</em> site!)</p>
-                    <p class="works-text">Creating this portfolio was an exercise in both web design and responsive web development. A simple, minimal UI with pops of colorful gradients in which I will continue to post projects. If you'd like to reach me for more info, hit one of the icons below.</p>
+
+            <div class='work-block-container' data-scroll>
+                <a href='#works-container'>
+                    <div class='work-block' id='fansi-schmansi-block'>
+                        <div class=work-logo>
+                            FS
+                        </div>
+                        <div class='work-title'>
+                            <span>Fansí Schmansí</span>
+                        </div>
+                    </div>
+                </a>                      
+            </div>
+            <div class='work-block-container' data-scroll>
+                <a href='#works-container'>
+                    <div class='work-block' id='syzygy-block'>
+                    <div class=work-logo>
+                        <div>S</div>
+                    </div>
+                    <div class='work-title'>
+                        <span>Syzygy</span>
+                    </div>
+                    </div>
+                </a>
+            </div>
+            <div class='work-block-container' data-scroll>
+                <a href='#works-container'>
+                    <div class='work-block' id='film-scope-block'>
+                        <div class=work-logo>
+                            FS
+                        </div>
+                        <div class='work-title'>
+                            <span>Film Scope</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class='work-block-container' data-scroll>
+                <a href='#works-container'>
+                    <div class='work-block' id='roman-numeral-convertor-block'>
+                        <div class=work-logo>
+                            III
+                        </div>
+                        <div class='work-title'>
+                            <span>Roman Numeral Convertor</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class='work-block-container' data-scroll>
+                <a href='#works-container'>
+                    <div class='work-block' id='dum-drum-block'>
+                        <div class=work-logo>
+                            DD
+                        </div>
+                        <div class='work-title'>
+                            <span>DumDrum</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class='work-block-container' data-scroll>
+                <a href='#works-container'>
+                    <div class='work-block' id='portfolio-block'>
+                        <img class="logo-white" src="https://res.cloudinary.com/debdev/image/upload/v1547075163/DebDevelopsLogoWhite-min.png">
+                    </div>
+                </a>
+            </div>
+            
+            <div id="tetris-div">
+                <div id='tetris-container'>
+                    <div class="img-container tetris-img-container">
+                        <p class="title-text tetris-title-text">
+                            <span id="T">T</span>
+                            <span id="e">e</span>
+                            <span id="t">t</span>
+                            <span id="r">r</span>
+                            <span id="i">i</span>
+                            <span id="s">s</span>
+                        </p>
+                        <div id="codepen-container">
+                            <p data-height="434" data-theme-id="dark" data-slug-hash="WaoqPw" data-default-tab="result"
+                                data-user="debthornton" data-pen-title="Tetris" data-preview="true" class="codepen">See
+                                the Pen <a href="https://codepen.io/debthornton/pen/WaoqPw/">Tetris</a> by Deborah
+                                Thornton (<a href="https://codepen.io/debthornton">@debthornton</a>) on <a
+                                    href="https://codepen.io">CodePen</a>.</p>
+                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                        </div>
+                    </div>
+                    <p class="description-text">Tetris has always been one of my favorite games to play, but it's now become
+                        my favorite game to code! This app was coded using Vanilla JavaScript, as it was my first
+                        exposure to more complex functional programming. The most challenging aspect of building this
+                        app was maintaining the boundary between the shifting/rotating pieces and the game's outer
+                        frame. I've learned a lot in the process and was able to deliver this app as the finished
+                        product. Hit the <strong>"Run Pen"</strong> button to give it a shot.</p>
+                    <br>
                     <div class='works-sub-text'>
                         <span>HTML5</span>/
                         <span>CSS3</span>/
-                        <span>JQUERY</span>
+                        <span>JS</span>
                     </div>
+                    <div class="line"></div>
                 </div>
+                    
             </div>
         </div>
         <div id="social">
-            <hr class="hr-social">
             <div id="social-buttons">
-                <a href="https://github.com/debxdev" target="_blank"><button class="btn btn-link"><i class="fa fa-github" style="font-size:35px"></i></button></a>
-                <a href="https://codepen.io/debthornton/" target="_blank"><button class="btn btn-link"><i class="fa fa-codepen" style="font-size:30px"></i></button></a>
-                <a href="mailto:debdevelops@icloud.com"><button class="btn btn-link"><i class="fa fa-envelope-o" style="font-size:30px"></i></button></a>
-            </div>
-            <hr class="hr-social">
+                <a href="https://github.com/debxdev" target="_blank"><button class="btn btn-link"><i
+                            class="fa fa-github icon"></i></button></a>
+                <a href="https://codepen.io/debthornton/" target="_blank"><button class="btn btn-link"><i
+                            class="fa fa-codepen icon"></i></button></a>
+                <a href="mailto:debdevelops@icloud.com"><button class="btn btn-link"><i class="fa fa-envelope-o icon"></i></button></a>
+            </div>   
         </div>
     </main>
 
-    <footer>
+    <footer data-scroll>
         <div class="footer-text">
-            <p>Developed by Deborah Thornton</p>
-            <p>Philadelphia, PA</p>
+            <p>Developed by Deb Thornton</p>
         </div>
-
     </footer>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src="app.js"></script>
-</body>
 
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script>
+        ScrollOut();
+    </script>      
+    <script src="js/main.min.js" async defer></script>
+    <script src="js/worksAnimation.min.js" async defer></script>
+</body>
 </html>
